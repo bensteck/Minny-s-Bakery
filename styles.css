@@ -8,16 +8,12 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html, body {
   min-height: 100%;
-  background: #c8b89a; /* gutter color visible if viewport > 1440px */
+  background: white;
 }
 
-/* ════════════════════════════════════
-   FIXED-WIDTH OUTER WRAPPER
-   The page is always exactly 1440px wide.
-   It never reflows or responds to viewport changes.
-════════════════════════════════════ */
+
 #page {
-  width: 1440px;
+  width: 100%;
   min-height: 100vh;
   margin: 0 auto;
   background: #f5e7c2;
@@ -66,7 +62,7 @@ img { display: block; }
    NAVBAR
 ════════════════════════════════════ */
 .navbar {
-  width: 1440px;
+  width: 100%;
   background: var(--cream);
   display: flex;
   align-items: center;
@@ -265,7 +261,7 @@ img { display: block; }
      <img src="food-strip.jpg" class="photo-strip" alt="Baked goods" style="object-fit:cover;">
 ════════════════════════════════════ */
 .photo-strip {
-  width: 1440px;
+  width: 100%;
   height: 230px;
 }
 
@@ -372,7 +368,7 @@ img { display: block; }
      <img src="pastry-banner.jpg" class="pastry-banner" alt="Pastries" style="object-fit:cover;">
 ════════════════════════════════════ */
 .pastry-banner {
-  width: 1440px;
+  width: 100%;
   height: 240px;
 }
 
