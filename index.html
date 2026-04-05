@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Minny's Bakery</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div id="page">
+
+  <!-- ══════════════════════════════
+       NAVBAR
+  ══════════════════════════════ -->
+  <nav class="navbar" id="top">
+
+    <!--
+      LOGO IMAGE
+      Replace this <div> with:
+        <img src="logo.png" class="nav-logo-box" alt="Minny's Bakery Logo">
+    -->
+    <div class="ph nav-logo-box">[ Logo ]</div>
+
+    <ul class="nav-links">
+      <li><a href="#" class="active">Home</a></li>
+      <li><a href="#">Menu</a></li>
+      <li><a href="#">About Us</a></li>
+      <li><a href="#">Contact Us</a></li>
+      <li><a href="#">Cart: 0</a></li>
+    </ul>
+
+    <a href="#" class="nav-cta">Sign Up for Our Newsletter</a>
+  </nav>
+
+  <!-- ══════════════════════════════
+       HERO
+  ══════════════════════════════ -->
+  <section class="hero">
+    <div class="hero-text">
+      <p class="hero-eyebrow">Home of the Famous Minny's Homemade Chocolate Pie</p>
+      <h1 class="hero-title">MINNY'S<br>BAKERY</h1>
+      <div class="hero-btns">
+        <a href="#" class="btn-brown">Minny's Homemade<br>Chocolate Pie</a>
+        <a href="#" class="btn-brown">Check Out The<br>Entire Menu</a>
+      </div>
+    </div>
+    <!--
+      HERO IMAGE
+      Replace with:
+        <img src="hero-pie.jpg" style="width:100%;height:340px;object-fit:cover;" alt="Chocolate Pie">
+    -->
+    <div class="ph" style="width:100%;height:340px;">[ Hero Pie Image ]</div>
+  </section>
+
+  <!-- ══════════════════════════════
+       ORDER WIDGET  (Pick-Up / Shipping)
+  ══════════════════════════════ -->
+  <div class="order-wrapper">
+    <div class="order-box">
+
+      <!-- Tabs -->
+      <div class="order-tabs">
+        <button class="order-tab active">
+          <span class="tab-pill">Pick - Up</span>
+          <span class="tab-sub">From Our Lancaster Location</span>
+        </button>
+        <button class="order-tab">
+          <span class="tab-pill">Shipping</span>
+        </button>
+      </div>
+
+      <!-- Form fields -->
+      <div class="order-form">
+        <div class="o-field">
+          <label>Date</label>
+          <select><option>Select date…</option></select>
+        </div>
+        <div class="o-field">
+          <label>Time</label>
+          <select><option>Select time…</option></select>
+        </div>
+
+        <div class="o-divider"></div>
+
+        <div class="o-field">
+          <label>Locations</label>
+          <select><option>Select location…</option></select>
+        </div>
+        <div class="o-field">
+          <label>Date</label>
+          <select><option>Select date…</option></select>
+        </div>
+        <div class="o-field">
+          <label>Time</label>
+          <select><option>Select time…</option></select>
+        </div>
+
+        <button class="o-search">Search</button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════
+       PANORAMIC FOOD PHOTO STRIP
+       ONE single wide image — not multiple separate photos.
+       Replace with:
+         <img src="food-strip.jpg" class="photo-strip" alt="Baked goods" style="object-fit:cover;">
+  ══════════════════════════════ -->
+  <div class="ph photo-strip">[ Panoramic Food Photo — Single Wide Image ]</div>
+
+  <!-- ══════════════════════════════
+       QUICK ADD FROM MENU
+  ══════════════════════════════ -->
+  <section class="menu-section">
+    <h2>Quick Add From Menu</h2>
+    <p class="menu-sub">Homemade classics and our signature<br>chocolate pies. Baked daily just for you.</p>
+
+    <div class="menu-tabs">
+      <button class="menu-tab active">Classics</button>
+      <button class="menu-tab">Pies</button>
+      <button class="menu-tab">Pastries</button>
+      <button class="menu-tab">Holidays</button>
+    </div>
+
+    <div class="menu-cards">
+      <div class="m-card">
+        <div class="ph m-card-img">[ Chocolate Pie ]</div>
+        <span class="m-card-heart">♡</span>
+        <div class="m-card-body">
+          <div class="m-card-title">Minny's Chocolate Pie</div>
+          <div class="m-card-price">$5</div>
+        </div>
+        <button class="m-card-add">+</button>
+      </div>
+      <div class="m-card">
+        <div class="ph m-card-img">[ Whoopie Pie ]</div>
+        <span class="m-card-heart">♡</span>
+        <div class="m-card-body">
+          <div class="m-card-title">Chocolate Whoopie Pie</div>
+          <div class="m-card-price">$7</div>
+        </div>
+        <button class="m-card-add">+</button>
+      </div>
+      <div class="m-card">
+        <div class="ph m-card-img">[ Sticky Bun ]</div>
+        <span class="m-card-heart">♡</span>
+        <div class="m-card-body">
+          <div class="m-card-title">Sticky Bun</div>
+          <div class="m-card-price">$8</div>
+        </div>
+        <button class="m-card-add">+</button>
+      </div>
+      <div class="m-card">
+        <div class="ph m-card-img">[ Apple Dumpling ]</div>
+        <span class="m-card-heart">♡</span>
+        <div class="m-card-body">
+          <div class="m-card-title">Apple Dumpling</div>
+          <div class="m-card-price">$4</div>
+        </div>
+        <button class="m-card-add">+</button>
+      </div>
+    </div>
+
+    <button class="btn-orange">More Menu</button>
+  </section>
+
+  <!-- ══════════════════════════════
+       FULL-WIDTH PASTRY BANNER
+       Replace with: <img src="pastry-banner.jpg" class="pastry-banner" style="object-fit:cover;">
+  ══════════════════════════════ -->
+  <div class="ph pastry-banner">[ Full-Width Pastry Banner Photo ]</div>
+
+  <!-- ══════════════════════════════
+       MEET MINNY
+  ══════════════════════════════ -->
+  <section class="meet-section">
+    <!--
+      MINNY PHOTO
+      Replace with: <img src="minny.jpg" class="meet-photo" style="object-fit:cover;width:560px;">
+    -->
+    <div class="ph meet-photo">[ Photo of Minny ]</div>
+
+    <div class="meet-text">
+      <h2>Meet Minny!</h2>
+      <p class="meet-tagline">The heart, soul, and rolling pin behind Lancaster's favorite chocolate pie.</p>
+      <h3>History of Our Bakery</h3>
+      <p>
+        Minny began over thirty years ago in a quiet farmhouse kitchen right here in Lancaster County.
+        What started as a single indulgent family secret for the perfect chocolate all-butter pie has since
+        grown into a local staple, but has never lost that homemade touch.
+      </p>
+      <p>
+        We still believe in doing things the old-fashioned way — sourcing our dairy from neighboring farms
+        and baking something fresh every morning. When we traded the original family store for a professional
+        bakery, our mission remained the same: using those treasured Dutch kitchen recipes to make sure
+        every bite tastes exactly like home.
+      </p>
+      <!-- Decorative pie doodle (purely decorative, low opacity) -->
+      <svg class="pie-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50" cy="50" r="44" stroke="#3a2c1e" stroke-width="3.5"/>
+        <line x1="50" y1="6"  x2="50" y2="94" stroke="#3a2c1e" stroke-width="2.5"/>
+        <line x1="6"  y1="50" x2="94" y2="50" stroke="#3a2c1e" stroke-width="2.5"/>
+        <line x1="19" y1="19" x2="81" y2="81" stroke="#3a2c1e" stroke-width="2.5"/>
+        <line x1="81" y1="19" x2="19" y2="81" stroke="#3a2c1e" stroke-width="2.5"/>
+        <circle cx="50" cy="50" r="6" stroke="#3a2c1e" stroke-width="2"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════
+       2-COLUMN PHOTO GRID
+  ══════════════════════════════ -->
+  <div class="two-photo">
+    <div class="ph">[ Bakery Photo — Left ]</div>
+    <div class="ph">[ Bakery Photo — Right ]</div>
+  </div>
+
+  <!-- ══════════════════════════════
+       TESTIMONIALS
+  ══════════════════════════════ -->
+  <section class="testimonials">
+    <h2>Beloved by Thousands of Happy Customers</h2>
+    <p class="sub">See why our neighbors and fellow pie-lovers across Lancaster<br>keep coming back for another slice.</p>
+
+    <div class="t-cards">
+      <div class="t-card">
+        <div class="t-name">Robert McCay</div>
+        <div class="t-loc">Lancaster, Pennsylvania</div>
+        <div class="t-stars">★★★★★</div>
+        <p>"Minny's Homemade Chocolate Pie is a CLASSIC for a reason. Highly recommend — what incredible customer service."</p>
+      </div>
+      <div class="t-card">
+        <div class="t-name">Cindy Johnson</div>
+        <div class="t-loc">Lancaster, Pennsylvania</div>
+        <div class="t-stars">★★★★★</div>
+        <p>"Best sticky buns in the county, hands down. Drive 30 minutes every Saturday morning just to get them while they're warm."</p>
+      </div>
+      <div class="t-card">
+        <div class="t-name">Tracy Leeds</div>
+        <div class="t-loc">Lancaster, Pennsylvania</div>
+        <div class="t-stars">★★★★★</div>
+        <p>"Minny is the sweetest! You can really taste the local ingredients. The Whoopie Pies are always a hit at my family dinners."</p>
+      </div>
+    </div>
+
+    <div class="t-nav">
+      <div class="t-dots">
+        <div class="t-dot active"></div>
+        <div class="t-dot"></div>
+        <div class="t-dot"></div>
+        <div class="t-dot"></div>
+      </div>
+      <div class="t-arrows">
+        <button class="t-arrow">&#8592;</button>
+        <button class="t-arrow">&#8594;</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════
+       BACK TO TOP
+  ══════════════════════════════ -->
+  <div class="back-top">
+    <a href="#top">Back to Top</a>
+  </div>
+
+  <!-- ══════════════════════════════
+       FOOTER
+  ══════════════════════════════ -->
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <div class="f-logo">Logo</div>
+        <p class="f-tagline">Our mission is to provide convenience<br>and help you raise your rated business.</p>
+        <div class="f-socials">
+          <div class="f-soc">f</div>
+          <div class="f-soc">in</div>
+          <div class="f-soc">tw</div>
+        </div>
+      </div>
+      <div class="f-col">
+        <h4>About</h4>
+        <ul>
+          <li><a href="#">How It Works</a></li>
+          <li><a href="#">Featured</a></li>
+          <li><a href="#">Partnership</a></li>
+          <li><a href="#">Business Relation</a></li>
+        </ul>
+      </div>
+      <div class="f-col">
+        <h4>Community</h4>
+        <ul>
+          <li><a href="#">Events</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Podcast</a></li>
+          <li><a href="#">Invite a Friend</a></li>
+        </ul>
+      </div>
+      <div class="f-col">
+        <h4>Socials</h4>
+        <ul>
+          <li><a href="#">Discord</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">Facebook</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>©2023 Company Name. All rights reserved</span>
+      <span>
+        <a href="#">Privacy Policy</a> &nbsp;&amp;&nbsp; <a href="#">Terms &amp; Conditions</a>
+      </span>
+    </div>
+  </footer>
+
+</div><!-- /#page -->
+
+<script>
+  /* Menu category tabs */
+  document.querySelectorAll('.menu-tab').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.menu-tab').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    });
+  });
+  /* Order pick-up / shipping tabs */
+  document.querySelectorAll('.order-tab').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.order-tab').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    });
+  });
+  /* Testimonial navigation dots */
+  document.querySelectorAll('.t-dot').forEach(dot => {
+    dot.addEventListener('click', () => {
+      document.querySelectorAll('.t-dot').forEach(d => d.classList.remove('active'));
+      dot.classList.add('active');
+    });
+  });
+</script>
+</body>
+</html>

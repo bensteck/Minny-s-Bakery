@@ -1,0 +1,586 @@
+/* ============================================================
+   Minny's Bakery — styles.css
+   Google Font import (keep this at the top)
+   @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Lato:wght@300;400;700&display=swap');
+   ============================================================ */
+
+/* ── RESET ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html, body {
+  min-height: 100%;
+  background: #c8b89a; /* gutter color visible if viewport > 1440px */
+}
+
+/* ════════════════════════════════════
+   FIXED-WIDTH OUTER WRAPPER
+   The page is always exactly 1440px wide.
+   It never reflows or responds to viewport changes.
+════════════════════════════════════ */
+#page {
+  width: 1440px;
+  min-height: 100vh;
+  margin: 0 auto;
+  background: #f5e7c2;
+  overflow: hidden;
+  position: relative;
+}
+
+/* ── GLOBAL DESIGN TOKENS ── */
+:root {
+  --cream:        #f5e7c2;
+  --cream-mid:    #edddb0;
+  --orange:       #e07a38;
+  --orange-dk:    #c4611f;
+  --purple:       #8b69b5;
+  --purple-lt:    #b89fd4;
+  --brown:        #3a2c1e;
+  --brown-dk:     #241a10;
+  --tan-card:     #ede0b8;
+  --gray-txt:     #6b5540;
+  --white:        #ffffff;
+  --red-ph:       #cc3333;
+}
+
+body, #page { font-family: 'Lato', sans-serif; color: var(--brown); }
+a   { text-decoration: none; color: inherit; }
+img { display: block; }
+
+/* ════════════════════════════════════
+   RED IMAGE PLACEHOLDERS
+   Remove .ph rules once real images are in place.
+════════════════════════════════════ */
+.ph {
+  background: var(--red-ph);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255,255,255,0.9);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: 'Lato', sans-serif;
+}
+
+/* ════════════════════════════════════
+   NAVBAR
+════════════════════════════════════ */
+.navbar {
+  width: 1440px;
+  background: var(--cream);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 56px;
+  height: 64px;
+  border-bottom: 1px solid rgba(0,0,0,0.07);
+  position: sticky;
+  top: 0;
+  z-index: 200;
+}
+
+/* Logo is an IMAGE — swap .ph with <img> when ready */
+.nav-logo-box {
+  width: 92px;
+  height: 46px;
+  flex-shrink: 0;
+}
+
+.nav-links {
+  display: flex;
+  gap: 36px;
+  list-style: none;
+  font-size: 14px;
+  font-weight: 700;
+}
+.nav-links a              { color: var(--brown); }
+.nav-links a.active,
+.nav-links a:hover        { color: var(--orange); }
+
+.nav-cta {
+  background: var(--orange);
+  color: var(--white);
+  padding: 10px 22px;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.nav-cta:hover { background: var(--orange-dk); }
+
+/* ════════════════════════════════════
+   HERO
+════════════════════════════════════ */
+.hero {
+  display: grid;
+  grid-template-columns: 560px 1fr;
+  height: 340px;
+  background: var(--cream);
+}
+.hero-text {
+  padding: 44px 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.hero-eyebrow {
+  font-size: 11px;
+  color: var(--gray-txt);
+  font-style: italic;
+  margin-bottom: 10px;
+}
+.hero-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 52px;
+  font-weight: 900;
+  line-height: 1.05;
+  color: var(--brown);
+  margin-bottom: 24px;
+}
+.hero-btns { display: flex; gap: 12px; }
+.btn-brown {
+  background: var(--brown);
+  color: var(--white);
+  padding: 10px 18px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.5;
+  text-align: center;
+}
+.btn-brown:hover { background: var(--brown-dk); }
+
+/* ════════════════════════════════════
+   ORDER / PICK-UP / SHIPPING WIDGET
+════════════════════════════════════ */
+.order-wrapper {
+  background: var(--cream);
+  padding: 0 56px;
+  position: relative;
+  z-index: 10;
+}
+.order-box {
+  background: var(--white);
+  border-radius: 0 0 6px 6px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.14);
+  overflow: hidden;
+  max-width: 850px;
+}
+
+/* — Tab row — */
+.order-tabs {
+  display: flex;
+  align-items: stretch;
+  background: var(--white);
+  border-bottom: 1px solid #e2d6bc;
+}
+.order-tab {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 18px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--gray-txt);
+}
+.tab-pill {
+  display: inline-block;
+  background: var(--purple);
+  color: var(--white);
+  border-radius: 14px;
+  padding: 3px 14px;
+  font-size: 12px;
+  font-weight: 700;
+}
+.tab-sub {
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--gray-txt);
+}
+.order-tab:not(.active) .tab-pill { background: var(--purple-lt); }
+.order-tab.active       .tab-pill { background: var(--purple); }
+
+/* — Form row — */
+.order-form {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+  padding: 12px 20px 16px;
+}
+.o-field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+  min-width: 0;
+}
+.o-field label {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--brown);
+}
+.o-field select {
+  border: 1px solid #d6c8a8;
+  border-radius: 4px;
+  padding: 7px 8px;
+  font-size: 12px;
+  color: var(--gray-txt);
+  background: var(--white);
+  appearance: none;
+  width: 100%;
+  cursor: pointer;
+}
+.o-divider {
+  width: 1px;
+  height: 40px;
+  background: #e0d4bb;
+  flex-shrink: 0;
+  align-self: flex-end;
+  margin-bottom: 2px;
+}
+.o-search {
+  background: var(--orange);
+  color: var(--white);
+  border: none;
+  border-radius: 4px;
+  padding: 9px 28px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.o-search:hover { background: var(--orange-dk); }
+
+/* ════════════════════════════════════
+   PANORAMIC FOOD PHOTO STRIP
+   ONE single wide image — not separate panels.
+   Replace <div class="ph photo-strip"> with:
+     <img src="food-strip.jpg" class="photo-strip" alt="Baked goods" style="object-fit:cover;">
+════════════════════════════════════ */
+.photo-strip {
+  width: 1440px;
+  height: 230px;
+}
+
+/* ════════════════════════════════════
+   QUICK ADD FROM MENU
+════════════════════════════════════ */
+.menu-section {
+  background: #3a2c1e;
+  padding: 52px 56px 44px;
+  text-align: center;
+  color: var(--white);
+}
+.menu-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.menu-sub {
+  font-size: 13px;
+  color: rgba(255,255,255,0.6);
+  font-style: italic;
+  margin-bottom: 28px;
+}
+.menu-tabs {
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+  margin-bottom: 28px;
+}
+.menu-tab {
+  padding: 10px 36px;
+  font-size: 14px;
+  font-weight: 700;
+  color: rgba(255,255,255,0.5);
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -1px;
+}
+.menu-tab.active { color: var(--white); border-bottom-color: var(--orange); }
+.menu-tab:hover  { color: rgba(255,255,255,0.85); }
+
+.menu-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  max-width: 920px;
+  margin: 0 auto 28px;
+}
+.m-card {
+  background: var(--white);
+  border-radius: 6px;
+  overflow: hidden;
+  text-align: left;
+  color: var(--brown);
+  position: relative;
+}
+.m-card-img { width: 100%; height: 130px; }
+.m-card-heart {
+  position: absolute;
+  top: 8px; right: 8px;
+  color: rgba(255,255,255,0.9);
+  font-size: 15px;
+  cursor: pointer;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.4);
+}
+.m-card-body  { padding: 10px 12px 36px; }
+.m-card-title { font-size: 13px; font-weight: 700; line-height: 1.3; margin-bottom: 5px; }
+.m-card-price { font-size: 13px; font-weight: 700; }
+.m-card-add {
+  position: absolute;
+  bottom: 8px; right: 8px;
+  width: 26px; height: 26px;
+  background: var(--orange);
+  color: var(--white);
+  border-radius: 4px;
+  border: none;
+  font-size: 20px;
+  font-weight: 300;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+.btn-orange {
+  display: inline-block;
+  background: var(--orange);
+  color: var(--white);
+  padding: 12px 40px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+}
+.btn-orange:hover { background: var(--orange-dk); }
+
+/* ════════════════════════════════════
+   FULL-WIDTH PASTRY BANNER
+   Replace <div class="ph pastry-banner"> with:
+     <img src="pastry-banner.jpg" class="pastry-banner" alt="Pastries" style="object-fit:cover;">
+════════════════════════════════════ */
+.pastry-banner {
+  width: 1440px;
+  height: 240px;
+}
+
+/* ════════════════════════════════════
+   MEET MINNY
+════════════════════════════════════ */
+.meet-section {
+  display: grid;
+  grid-template-columns: 560px 1fr;
+  background: var(--cream);
+  min-height: 360px;
+}
+.meet-photo { min-height: 360px; }
+.meet-text  { padding: 48px 56px; position: relative; }
+.meet-text h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 34px;
+  font-weight: 700;
+  color: var(--brown);
+  margin-bottom: 4px;
+}
+.meet-tagline {
+  font-size: 13px;
+  color: var(--gray-txt);
+  font-style: italic;
+  margin-bottom: 22px;
+}
+.meet-text h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: var(--brown);
+}
+.meet-text p {
+  font-size: 13px;
+  color: var(--gray-txt);
+  line-height: 1.75;
+  margin-bottom: 14px;
+}
+.pie-svg {
+  position: absolute;
+  bottom: 18px; right: 18px;
+  width: 90px; height: 90px;
+  opacity: 0.12;
+}
+
+/* ════════════════════════════════════
+   2-COLUMN PHOTO GRID
+════════════════════════════════════ */
+.two-photo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 240px;
+}
+.two-photo .ph { height: 240px; }
+
+/* ════════════════════════════════════
+   TESTIMONIALS
+════════════════════════════════════ */
+.testimonials {
+  background: var(--cream);
+  padding: 64px 56px 48px;
+  text-align: center;
+}
+.testimonials h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 34px;
+  font-weight: 700;
+  color: var(--brown);
+  margin-bottom: 6px;
+}
+.testimonials .sub {
+  font-size: 13px;
+  color: var(--gray-txt);
+  font-style: italic;
+  margin-bottom: 36px;
+}
+.t-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 960px;
+  margin: 0 auto 30px;
+}
+.t-card {
+  background: var(--tan-card);
+  border-radius: 6px;
+  padding: 20px;
+  text-align: left;
+}
+.t-name  { font-size: 13px; font-weight: 700; color: var(--brown); }
+.t-loc   { font-size: 11px; color: var(--gray-txt); margin-bottom: 8px; }
+.t-stars { color: var(--orange); font-size: 13px; margin-bottom: 8px; }
+.t-card p {
+  font-size: 12px;
+  color: var(--gray-txt);
+  line-height: 1.65;
+  font-style: italic;
+}
+.t-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 960px;
+  margin: 0 auto;
+}
+.t-dots  { display: flex; gap: 8px; }
+.t-dot {
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  background: var(--cream-mid);
+  border: 2px solid var(--orange);
+  cursor: pointer;
+}
+.t-dot.active { background: var(--orange); }
+.t-arrows { display: flex; gap: 10px; }
+.t-arrow {
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  border: 2px solid var(--brown);
+  background: transparent;
+  font-size: 15px;
+  cursor: pointer;
+  color: var(--brown);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.t-arrow:hover { background: var(--brown); color: var(--white); }
+
+/* ════════════════════════════════════
+   BACK TO TOP
+════════════════════════════════════ */
+.back-top {
+  background: var(--cream);
+  text-align: center;
+  padding: 24px 0 40px;
+}
+.back-top a {
+  display: inline-block;
+  background: var(--orange);
+  color: var(--white);
+  padding: 12px 38px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 700;
+}
+.back-top a:hover { background: var(--orange-dk); }
+
+/* ════════════════════════════════════
+   FOOTER
+════════════════════════════════════ */
+footer {
+  background: #241a10;
+  color: rgba(255,255,255,0.7);
+  padding: 48px 56px 24px;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr 1fr;
+  gap: 48px;
+  margin-bottom: 40px;
+}
+.f-logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  font-weight: 900;
+  color: var(--white);
+  margin-bottom: 10px;
+}
+.f-tagline { font-size: 12px; line-height: 1.65; margin-bottom: 16px; }
+.f-socials { display: flex; gap: 10px; }
+.f-soc {
+  width: 28px; height: 28px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.f-soc:hover { background: var(--orange); }
+.f-col h4 {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--white);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 14px;
+}
+.f-col ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+.f-col ul li a { font-size: 13px; color: rgba(255,255,255,0.6); }
+.f-col ul li a:hover { color: var(--orange); }
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 18px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: rgba(255,255,255,0.35);
+}
+.footer-bottom a       { color: rgba(255,255,255,0.35); }
+.footer-bottom a:hover { color: rgba(255,255,255,0.7); }
