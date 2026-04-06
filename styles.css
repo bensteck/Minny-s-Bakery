@@ -143,7 +143,7 @@ img { display: block; }
 
 
 .order-wrapper {
-  background: #ECE3C1;
+  background: var(--cream);
   padding: 0 56px;
   position: relative;
   z-index: 10;
