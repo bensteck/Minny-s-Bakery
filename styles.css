@@ -41,10 +41,6 @@ body, #page { font-family: 'Lato', sans-serif; color: var(--brown); }
 a   { text-decoration: none; color: inherit; }
 img { display: block; }
 
-/* ════════════════════════════════════
-   RED IMAGE PLACEHOLDERS
-   Remove .ph rules once real images are in place.
-════════════════════════════════════ */
 .ph {
   background: var(--red-ph);
   display: flex;
@@ -58,9 +54,7 @@ img { display: block; }
   font-family: 'Lato', sans-serif;
 }
 
-/* ════════════════════════════════════
-   NAVBAR
-════════════════════════════════════ */
+
 .navbar {
   width: 100%;
   background: var(--cream);
@@ -75,7 +69,7 @@ img { display: block; }
   z-index: 200;
 }
 
-/* Logo is an IMAGE — swap .ph with <img> when ready */
+
 .nav-logo-box {
   width: 92px;
   height: 46px;
@@ -380,7 +374,8 @@ img { display: block; }
   background: var(--cream);
   min-height: 360px;
 }
-.meet-photo { min-height: 360px; }
+.meet-photo {  max-width: 100%;
+    height: auto; }
 .meet-text  { padding: 48px 56px; position: relative; }
 .meet-text h2 {
   font-family: 'Playfair Display', serif;
