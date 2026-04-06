@@ -147,14 +147,13 @@ img { display: block; }
 }
 .btn-brown:hover { background: var(--brown-dk); }
 
-/* ════════════════════════════════════
-   ORDER / PICK-UP / SHIPPING WIDGET
-════════════════════════════════════ */
+
 .order-wrapper {
-  background: #C29DCE;
+  background: #ECE3C1;
   padding: 0 56px;
   position: relative;
   z-index: 10;
+  place-items: center;
 }
 .order-box {
   background: #C29DCE;
