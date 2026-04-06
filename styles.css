@@ -1,10 +1,10 @@
 /* ============================================================
    Minny's Bakery — styles.css
-   Google Font import (keep this at the top)
+   Google Font import 
    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Lato:wght@300;400;700&display=swap');
    ============================================================ */
 
-/* ── RESET ── */
+
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html, body {
   min-height: 100%;
@@ -533,7 +533,12 @@ footer {
   color: var(--white);
   margin-bottom: 10px;
 }
-.f-tagline { font-size: 12px; line-height: 1.65; margin-bottom: 16px; }
+.f-tagline { 
+   font-size: 12px; 
+   line-height: 1.65; 
+   margin-bottom: 16px; 
+   color: white;
+}
 .f-socials { display: flex; gap: 10px; }
 .f-soc {
   width: 28px; height: 28px;
