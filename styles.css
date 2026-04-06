@@ -538,13 +538,14 @@ footer {
 .f-soc {
   width: 28px; height: 28px;
   border-radius: 50%;
-  background: rgba(255,255,255,0.12);
+  background: rgba(255,255,255,1);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 11px;
   font-weight: 700;
   cursor: pointer;
+  color: #241a10;
 }
 .f-soc:hover { background: var(--orange); }
 .f-col h4 {
