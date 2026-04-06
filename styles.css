@@ -13,7 +13,7 @@ html, body {
 
 
 #page {
-  width: 100%;
+  min-width: 1440px;
   min-height: 100vh;
   margin: 0 auto;
   background: #f5e7c2;
@@ -374,8 +374,7 @@ img { display: block; }
   background: var(--cream);
   min-height: 360px;
 }
-.meet-photo {  max-width: 100%;
-    height: auto; }
+.meet-photo { width: 560px; height: 360px; object-fit: cover; flex-shrink: 0; }
 .meet-text  { padding: 48px 56px; position: relative; }
 .meet-text h2 {
   font-family: 'Playfair Display', serif;
