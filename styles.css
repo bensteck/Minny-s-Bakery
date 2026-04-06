@@ -151,13 +151,13 @@ img { display: block; }
    ORDER / PICK-UP / SHIPPING WIDGET
 ════════════════════════════════════ */
 .order-wrapper {
-  background: var(--cream);
+  background: #C29DCE;
   padding: 0 56px;
   position: relative;
   z-index: 10;
 }
 .order-box {
-  background: var(--white);
+  background: #C29DCE;
   border-radius: 0 0 6px 6px;
   box-shadow: 0 4px 18px rgba(0,0,0,0.14);
   overflow: hidden;
@@ -523,8 +523,8 @@ img { display: block; }
    FOOTER
 ════════════════════════════════════ */
 footer {
-  background: #241a10;
-  color: rgba(255,255,255,0.7);
+  background: #C29DCE;
+  color: #C29DCE;
   padding: 48px 56px 24px;
 }
 .footer-grid {
