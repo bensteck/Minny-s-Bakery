@@ -122,6 +122,7 @@ img { display: block; }
   flex-direction: column;
   justify-content: center;
   width: 500px;
+  background: linear-gradient(to right, rgba(245,231,194,0.85) 60%, transparent 100%);
 }
 .hero-eyebrow {
   font-size: 11px;
@@ -231,59 +232,6 @@ img { display: block; }
 .order-tab:not(.active) .tab-pill { background: var(--purple); }
 .order-tab.active       .tab-pill { background: var(--purple); }
 
-/* — Form row — */
-.order-form {
-  display: flex;
-  align-items: flex-end;
-  gap: 10px;
-  padding: 12px 20px 16px;
-}
-.o-field {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  flex: 1;
-  min-width: 0;
-}
-.o-field label {
-  font-size: 10px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  color: var(--brown);
-}
-.o-field select {
-  border: 1px solid #d6c8a8;
-  border-radius: 4px;
-  padding: 7px 8px;
-  font-size: 12px;
-  color: var(--gray-txt);
-  background: var(--white);
-  appearance: none;
-  width: 100%;
-  cursor: pointer;
-}
-.o-divider {
-  width: 1px;
-  height: 40px;
-  background: #e0d4bb;
-  flex-shrink: 0;
-  align-self: flex-end;
-  margin-bottom: 2px;
-}
-.o-search {
-  background: var(--orange);
-  color: var(--white);
-  border: none;
-  border-radius: 4px;
-  padding: 9px 28px;
-  font-size: 13px;
-  font-weight: 700;
-  cursor: pointer;
-  white-space: nowrap;
-  flex-shrink: 0;
-}
-.o-search:hover { background: var(--orange-dk); }
 
 
 .photo-strip {
