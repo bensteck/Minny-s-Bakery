@@ -102,6 +102,12 @@ img { display: block; }
 /* ════════════════════════════════════
    HERO
 ════════════════════════════════════ */
+.hero {
+  position: relative;
+  height: 500px;
+  overflow: hidden;
+}
+
 .hero::before {
   content: '';
   position: absolute;
@@ -118,7 +124,6 @@ img { display: block; }
   width: 100%;
   object-fit: cover;
   z-index: 0;
-  height: 500px;
 }
 .hero-text {
   position: relative;
@@ -164,10 +169,8 @@ img { display: block; }
   padding: 0 56px;
   position: relative;
   z-index: 10;
-  top: calc(500px - 60px);
-  left: 0;
-  right: 0;
-  max-width: 100%;
+  margin-top: -90px;
+  margin-bottom: -90px;
 }
 
 .order-box-left,
