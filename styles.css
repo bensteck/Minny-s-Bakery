@@ -410,27 +410,6 @@ img { display: block; }
 }
 
 
-
-In styles.css, find:
-css.testimonials {
-  background: var(--cream);
-  padding: 64px 56px 48px;
-  text-align: center;
-}
-.testimonials h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 34px;
-  font-weight: 700;
-  color: var(--brown);
-  margin-bottom: 6px;
-}
-.testimonials .sub {
-  font-size: 13px;
-  color: var(--gray-txt);
-  font-style: italic;
-  margin-bottom: 36px;
-}
-
 .testimonials {
   background: var(--brown);
   padding: 64px 56px 48px;
@@ -500,10 +479,10 @@ css.testimonials {
   display: flex;
   align-items: center;
   justify-content: center;
-  display: flex; 
-  flex-direction: row; 
-  gap: 10px;
 }
+
+.t-arrows { display: flex; flex-direction: row; gap: 10px; }
+
 .t-arrow:hover { background: var(--cream); color: var(--brown); }
 
 /* ════════════════════════════════════
