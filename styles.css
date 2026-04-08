@@ -431,7 +431,7 @@ css.testimonials {
   margin-bottom: 36px;
 }
 
-css.testimonials {
+.testimonials {
   background: var(--brown);
   padding: 64px 56px 48px;
   text-align: center;
