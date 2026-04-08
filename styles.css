@@ -152,57 +152,83 @@ img { display: block; }
 
 
 .order-wrapper {
-  background: transparent;
+  display: flex;
+  gap: 20px;
   padding: 0 56px;
   position: relative;
   z-index: 10;
-  margin-top: -60px;
+  margin-top: -70px;
+  margin-bottom: 0;
 }
-
-.order-box {
+.order-box-left,
+.order-box-right {
   background: #C29DCE;
-  border-radius: 0 0 6px 6px;
+  border-radius: 12px;
+  padding: 18px 24px;
+  flex: 1;
   box-shadow: 0 4px 18px rgba(0,0,0,0.14);
-  overflow: hidden;
-  max-width: 900px;
-  max-height: 150px;
 }
-
-/* — Tab row — */
-.order-tabs {
-  display: flex;
-  align-items: stretch;
-  background: #C29DCE;
-  border-bottom: none;
-}
-
-.order-tab {
+.order-box-label {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--brown-dk);
+  margin-bottom: 14px;
   display: flex;
   align-items: center;
   gap: 8px;
-  padding: 9px 18px;
-  border: none;
-  background: transparent;
-  cursor: pointer;
-  font-size: 12px;
-  font-weight: 700;
-  color: var(--gray-txt);
 }
-.tab-pill {
+.order-radio {
+  width: 14px; height: 14px;
+  border-radius: 50%;
+  border: 2px solid var(--white);
+  background: var(--white);
   display: inline-block;
-  background: var(--purple);
-  color: var(--purple);
-  border-radius: 14px;
-  padding: 3px 14px;
-  font-size: 12px;
+  flex-shrink: 0;
+}
+.order-form {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+}
+.o-field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+  min-width: 0;
+}
+.o-field label {
+  font-size: 10px;
   font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--brown-dk);
 }
-.tab-sub {
-  font-size: 11px;
-  font-weight: 400;
+.o-field select {
+  border: 1px solid rgba(255,255,255,0.5);
+  border-radius: 6px;
+  padding: 7px 8px;
+  font-size: 12px;
   color: var(--gray-txt);
+  background: var(--white);
+  appearance: none;
+  width: 100%;
+  cursor: pointer;
 }
-.order-tab:not(.active) .tab-pill { background: var(--purple-lt); }
+.o-search {
+  background: var(--cream);
+  color: var(--brown);
+  border: none;
+  border-radius: 6px;
+  padding: 9px 20px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.o-search:hover { background: var(--orange); color: var(--white); }
+.order-tab:not(.active) .tab-pill { background: var(--purple); }
 .order-tab.active       .tab-pill { background: var(--purple); }
 
 /* — Form row — */
