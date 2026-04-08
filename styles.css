@@ -473,22 +473,22 @@ img { display: block; }
 .t-arrow {
   width: 32px; height: 32px;
   border-radius: 50%;
-  border: 2px solid var(--brown);
+  border: 2px solid var(--cream);
   background: transparent;
   font-size: 15px;
   cursor: pointer;
-  color: var(--brown);
+  color: var(--cream);
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.t-arrow:hover { background: var(--brown); color: var(--white); }
+.t-arrow:hover { background: var(--brown); color: var(--orange); }
 
 /* ════════════════════════════════════
    BACK TO TOP
 ════════════════════════════════════ */
 .back-top {
-  background: var(--cream);
+  background: var(--brown);
   text-align: center;
   padding: 24px 0 40px;
 }
