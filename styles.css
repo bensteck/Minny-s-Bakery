@@ -411,11 +411,11 @@ img { display: block; }
 
 
 
-.testimonials {
-  background: var(--brown);
+In styles.css, find:
+css.testimonials {
+  background: var(--cream);
   padding: 64px 56px 48px;
   text-align: center;
-  color: var(--cream);
 }
 .testimonials h2 {
   font-family: 'Playfair Display', serif;
@@ -430,6 +430,26 @@ img { display: block; }
   font-style: italic;
   margin-bottom: 36px;
 }
+
+css.testimonials {
+  background: var(--brown);
+  padding: 64px 56px 48px;
+  text-align: center;
+}
+.testimonials h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 34px;
+  font-weight: 700;
+  color: var(--cream);
+  margin-bottom: 6px;
+}
+.testimonials .sub {
+  font-size: 13px;
+  color: var(--cream-mid);
+  font-style: italic;
+  margin-bottom: 36px;
+}
+
 .t-cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -460,15 +480,15 @@ img { display: block; }
   margin: 0 auto;
 }
 .t-dots  { display: flex; gap: 8px; }
+
 .t-dot {
   width: 10px; height: 10px;
   border-radius: 50%;
-  background: var(--cream-mid);
+  background: var(--brown);
   border: 2px solid var(--orange);
   cursor: pointer;
 }
 .t-dot.active { background: var(--orange); }
-.t-arrows { display: flex; gap: 10px; }
 .t-arrow {
   width: 32px; height: 32px;
   border-radius: 50%;
@@ -481,7 +501,7 @@ img { display: block; }
   align-items: center;
   justify-content: center;
 }
-.t-arrow:hover { background: var(--brown); color: var(--orange); }
+.t-arrow:hover { background: var(--cream); color: var(--brown); }
 
 /* ════════════════════════════════════
    BACK TO TOP
