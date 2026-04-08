@@ -361,8 +361,9 @@ img { display: block; }
   grid-template-columns: 560px 1fr;
   background: var(--cream);
   min-height: 360px;
+  margin-top: 40px
 }
-.meet-photo { width: 560px; height: 360px; object-fit: cover; flex-shrink: 0; }
+.meet-photo { width: 560px; height: 360px; object-fit: cover; flex-shrink: 0; border-radius: 12px; }
 .meet-text  { padding: 48px 56px; position: relative; }
 .meet-text h2 {
   font-family: 'Playfair Display', serif;
@@ -397,19 +398,16 @@ img { display: block; }
   opacity: 0.12;
 }
 
-/* ════════════════════════════════════
-   2-COLUMN PHOTO GRID
-════════════════════════════════════ */
+
 .two-photo {
   display: grid;
   grid-template-columns: 1fr 1fr;
   height: 240px;
+  margin-top: 40px
 }
-.two-photo .ph { height: 240px; }
 
-/* ════════════════════════════════════
-   TESTIMONIALS
-════════════════════════════════════ */
+
+
 .testimonials {
   background: var(--cream);
   padding: 64px 56px 48px;
