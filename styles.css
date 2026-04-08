@@ -416,6 +416,7 @@ img { display: block; }
   background: var(--brown);
   padding: 64px 56px 48px;
   text-align: center;
+  color: var(--cream);
 }
 .testimonials h2 {
   font-family: 'Playfair Display', serif;
