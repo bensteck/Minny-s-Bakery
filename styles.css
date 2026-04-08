@@ -500,6 +500,9 @@ css.testimonials {
   display: flex;
   align-items: center;
   justify-content: center;
+  display: flex; 
+  flex-direction: row; 
+  gap: 10px;
 }
 .t-arrow:hover { background: var(--cream); color: var(--brown); }
 
