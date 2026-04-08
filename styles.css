@@ -557,19 +557,19 @@ footer {
 
 /* 1. Main bar width */
 body::-webkit-scrollbar {
-  width: 12px;
+  width: 10px;
 }
 
 /* 2. The background track - Change 'antiquewhite' to your solid color */
 body::-webkit-scrollbar-track {
-  background-color: #f1f1f1; 
+  background-color: #f5e7c2; 
   box-shadow: inset 0 0 3px grey;
   border-radius: 10px;
 }
 
 /* 3. The draggable bar - Change '#f48228' to your solid color */
 body::-webkit-scrollbar-thumb {
-  background-color: #f48228; 
+  background-color: #3a2c1e; 
   border-radius: 10px;
 }
 
@@ -580,15 +580,5 @@ body::-webkit-scrollbar-button:single-button {
   background-repeat: no-repeat;
   background-position: center;
   /* Match this to your track or thumb color */
-  background-color: #f1f1f1; 
-}
-
-/* The Up Arrow (Triangle) */
-body::-webkit-scrollbar-button:single-button:vertical:decrement {
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://w3.org' width='100' height='100' fill='grey'><polygon points='50,20 90,80 10,80'/></svg>");
-}
-
-/* The Down Arrow (Triangle) */
-body::-webkit-scrollbar-button:single-button:vertical:increment {
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://w3.org' width='100' height='100' fill='grey'><polygon points='50,80 90,20 10,20'/></svg>");
+  background-color: #f5e7c2; 
 }
