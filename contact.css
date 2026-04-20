@@ -1,18 +1,11 @@
-/* ============================================================
-   contact.css — Minny's Bakery Contact Us Page
-   Companion to styles.css (shared tokens & navbar/footer)
-   ============================================================ */
-
-/* ══════════════════════════════════════
-   HERO
-══════════════════════════════════════ */
 .contact-hero {
   position: relative;
   height: 310px;
   overflow: hidden;
   background: var(--cream);
 }
-
+ 
+/* the actual image — must sit behind everything */
 .contact-hero-bg {
   position: absolute;
   top: 0; left: 0;
@@ -22,26 +15,26 @@
   z-index: 0;
   display: block;
 }
-
-/* warm cream wash over the photo */
+ 
+/* gradient ONLY on the left side, fades to transparent — matches home page hero */
 .contact-hero::before {
   content: '';
   position: absolute;
-  inset: 0;
-  background: rgba(245, 231, 194, 0.52);
+  top: 0; left: 0;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(245,231,194,0.92) 45%, transparent 100%);
   z-index: 1;
 }
-
-/* "CONTACT US" sits at the bottom-left of the hero */
+ 
+/* "CONTACT US" sits bottom-left over the gradient */
 .contact-hero-text {
-  position: relative;
+  position: absolute;
+  bottom: 44px;
+  left: 56px;
   z-index: 2;
-  display: flex;
-  align-items: flex-end;
-  height: 100%;
-  padding: 0 56px 44px;
 }
-
+ 
 .contact-hero-text h1 {
   font-family: 'Playfair Display', serif;
   font-size: 54px;
@@ -51,28 +44,26 @@
   text-transform: uppercase;
   line-height: 1;
 }
-
-
+ 
+ 
 /* ══════════════════════════════════════
    FOLLOW US ON OUR SOCIALS
 ══════════════════════════════════════ */
 .contact-socials {
   display: grid;
-  /* left column gets natural text width; right image bleeds to page edge */
   grid-template-columns: 1fr 1fr;
   align-items: start;
   background: var(--cream);
-  /* Left padding only — right image must reach the page edge */
   padding: 60px 0 60px 56px;
   gap: 40px;
   min-height: 380px;
 }
-
-/* LEFT ─ heading + list + icons */
+ 
+/* LEFT column */
 .contact-socials-left {
   padding-right: 24px;
 }
-
+ 
 .contact-socials-left h2 {
   font-family: 'Playfair Display', serif;
   font-size: 36px;
@@ -81,7 +72,7 @@
   margin-bottom: 28px;
   line-height: 1.15;
 }
-
+ 
 .social-list {
   list-style: none;
   display: flex;
@@ -89,20 +80,19 @@
   gap: 12px;
   margin-bottom: 52px;
 }
-
+ 
 .social-list li {
   font-family: 'Lato', sans-serif;
   font-size: 15px;
   font-weight: 700;
   color: var(--brown-dk);
 }
-
-/* three dark circles */
+ 
 .social-icons-row {
   display: flex;
   gap: 16px;
 }
-
+ 
 .soc-icon {
   width: 52px;
   height: 52px;
@@ -114,33 +104,37 @@
   cursor: pointer;
   transition: background 0.2s;
   flex-shrink: 0;
+  /* Font Awesome icon color */
+  color: var(--white);
+  font-size: 18px;
+  text-decoration: none;
 }
-
+ 
 .soc-icon:hover { background: var(--orange); }
-
+ 
+/* for SVG-based icons */
 .soc-icon svg {
   width: 22px;
   height: 22px;
   fill: var(--white);
   display: block;
 }
-
-/* RIGHT ─ pastry photo bleeds to page edge */
+ 
+/* RIGHT column — image fills the column and bleeds to the page edge */
 .contact-socials-right {
   overflow: hidden;
-  height: 320px;
-  /* no border-radius, no margin-right — sits flush with page edge */
+  height: 340px;
+  /* no right margin — flush with page edge */
 }
-
-.contact-socials-right img,
-.contact-socials-right .img-ph {
+ 
+.contact-socials-right img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
 }
-
-
+ 
+ 
 /* ══════════════════════════════════════
    GET IN TOUCH FORM
 ══════════════════════════════════════ */
@@ -151,12 +145,12 @@
   flex-direction: column;
   align-items: center;
 }
-
+ 
 .contact-form-block {
   width: 100%;
-  max-width: 370px;  /* matches wireframe form width */
+  max-width: 370px;
 }
-
+ 
 .contact-form-block h2 {
   font-family: 'Playfair Display', serif;
   font-size: 30px;
@@ -164,7 +158,7 @@
   color: var(--brown-dk);
   margin-bottom: 6px;
 }
-
+ 
 .contact-form-block .form-sub {
   font-family: 'Lato', sans-serif;
   font-size: 12px;
@@ -172,29 +166,27 @@
   line-height: 1.55;
   margin-bottom: 22px;
 }
-
-/* First Name + Last Name row */
+ 
 .form-name-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 12px;
 }
-
-/* individual field */
+ 
 .form-field {
   display: flex;
   flex-direction: column;
   gap: 5px;
   margin-bottom: 14px;
 }
-
+ 
 .form-field label {
   font-family: 'Lato', sans-serif;
   font-size: 11px;
   font-weight: 700;
   color: var(--brown-dk);
 }
-
+ 
 .form-field input {
   border: 1px solid rgba(58, 44, 30, 0.22);
   border-radius: 4px;
@@ -207,11 +199,10 @@
   width: 100%;
   transition: border-color 0.18s;
 }
-
+ 
 .form-field input:focus          { border-color: var(--orange); }
 .form-field input::placeholder   { color: rgba(107, 85, 64, 0.45); }
-
-/* newsletter checkbox row */
+ 
 .form-check {
   display: flex;
   align-items: center;
@@ -219,7 +210,7 @@
   margin-top: 2px;
   margin-bottom: 22px;
 }
-
+ 
 .form-check input[type="checkbox"] {
   width: 13px;
   height: 13px;
@@ -227,20 +218,20 @@
   cursor: pointer;
   flex-shrink: 0;
 }
-
+ 
 .form-check label {
   font-family: 'Lato', sans-serif;
   font-size: 11px;
   color: var(--gray-txt);
   cursor: pointer;
 }
-
-/* Submit button — blue as shown in the wireframe */
+ 
 .form-submit-row {
   display: flex;
   justify-content: flex-end;
 }
-
+ 
+/* blue submit button — matches wireframe */
 .btn-contact-submit {
   background: #4a6cf7;
   color: var(--white);
@@ -253,5 +244,5 @@
   cursor: pointer;
   transition: background 0.2s;
 }
-
+ 
 .btn-contact-submit:hover { background: #3658e0; }
