@@ -228,3 +228,12 @@
   color: var(--brown-dk);
   cursor: pointer;
 }
+
+#page {
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  margin-top: auto;
+}
