@@ -11,7 +11,7 @@
 </head>
 <body>
 <div id="page">
-
+ 
   <nav class="navbar" id="top">
     <img src="images/logo.png" class="nav-logo-box" alt="Minny's Bakery Logo">
     <ul class="nav-links">
@@ -23,24 +23,25 @@
     </ul>
     <a href="#" class="nav-cta">Sign Up for Our Newsletter</a>
   </nav>
-
+ 
   <!-- HERO -->
   <section class="contact-hero">
-    <img src="images/ladyserve1.jpeg" alt="description" style="width:100%; height:100%; object-fit:cover;">
+    <!-- FIX 1: added class="contact-hero-bg" so the image sits behind the text -->
+    <img src="images/ladyserve1.jpeg" class="contact-hero-bg" alt="Bakery counter">
     <div class="contact-hero-text">
       <h1>CONTACT US</h1>
     </div>
   </section>
-
+ 
   <!-- FOLLOW US ON OUR SOCIALS -->
   <section class="contact-socials">
     <div class="contact-socials-left">
       <h2>Follow Us On Our Socials</h2>
       <ul class="social-list">
         <li>Instagram: @minnysbakerylanc</li>
-        <li>Tiktok:@minnysbakerypa</li>
-        <li>X:@minnysbakery</li>
-        <li>Facebook:@minnysbakerylanc</li>
+        <li>Tiktok: @minnysbakerypa</li>
+        <li>X: @minnysbakery</li>
+        <li>Facebook: @minnysbakerylanc</li>
       </ul>
       <div class="social-icons-row">
         <div class="soc-icon"><i class="fab fa-facebook-f"></i></div>
@@ -48,19 +49,19 @@
         <div class="soc-icon"><i class="fab fa-instagram"></i></div>
       </div>
     </div>
-   </div>
-
+    <!-- FIX 2: removed the stray </div> that was here, breaking the grid -->
+    <!-- FIX 3: contact-socials-right is now correctly inside the section -->
     <div class="contact-socials-right">
-      <img src="images/goodiebox.jpeg" alt="description" style="width:100%; height:100%; object-fit:cover;">
+      <img src="images/goodiebox.jpeg" alt="Pastries">
     </div>
   </section>
-
+ 
   <!-- GET IN TOUCH -->
   <section class="contact-form-wrapper">
     <div class="contact-form-block">
       <h2>Get In Touch</h2>
       <p class="form-sub">Please send your reviews to Minny's and sign up for our News Letter.</p>
-
+ 
       <div class="form-name-row">
         <div class="form-field">
           <label>First Name</label>
@@ -71,28 +72,28 @@
           <input type="text" placeholder="Last Name">
         </div>
       </div>
-
+ 
       <div class="form-field">
         <label>Email</label>
         <input type="email" placeholder="@gmail.com">
       </div>
-
+ 
       <div class="form-field">
         <label>Label Name</label>
         <input type="text" placeholder="Placeholder">
       </div>
-
+ 
       <div class="form-check">
         <input type="checkbox" id="newsletter">
         <label for="newsletter">Check to sign up for our NewsLetter</label>
       </div>
-
+ 
       <div class="form-submit-row">
         <button class="btn-contact-submit">Submit</button>
       </div>
     </div>
   </section>
-
+ 
   <!-- FOOTER -->
   <footer>
     <div class="footer-grid">
@@ -134,7 +135,7 @@
       </span>
     </div>
   </footer>
-
+ 
 </div>
 </body>
 </html>
