@@ -5,7 +5,7 @@
   background: var(--cream);
 }
  
-/* the actual image — must sit behind everything */
+
 .contact-hero-bg {
   position: absolute;
   top: 0; left: 0;
@@ -16,7 +16,6 @@
   display: block;
 }
  
-/* gradient ONLY on the left side, fades to transparent — matches home page hero */
 .contact-hero::before {
   content: '';
   position: absolute;
@@ -27,7 +26,7 @@
   z-index: 1;
 }
  
-/* "CONTACT US" sits bottom-left over the gradient */
+
 .contact-hero-text {
   position: absolute;
   bottom: 44px;
@@ -46,9 +45,7 @@
 }
  
  
-/* ══════════════════════════════════════
-   FOLLOW US ON OUR SOCIALS
-══════════════════════════════════════ */
+
 .contact-socials {
   display: grid;
   grid-template-columns: 1fr 1fr;
