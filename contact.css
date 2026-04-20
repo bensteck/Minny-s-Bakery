@@ -14,7 +14,7 @@
   object-fit: cover;
   z-index: 0;
   display: block;
-  object-position: center 30%;
+  object-position: center 40%;
 }
  
 .contact-hero::before {
