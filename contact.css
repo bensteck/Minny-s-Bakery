@@ -1,0 +1,257 @@
+/* ============================================================
+   contact.css — Minny's Bakery Contact Us Page
+   Companion to styles.css (shared tokens & navbar/footer)
+   ============================================================ */
+
+/* ══════════════════════════════════════
+   HERO
+══════════════════════════════════════ */
+.contact-hero {
+  position: relative;
+  height: 310px;
+  overflow: hidden;
+  background: var(--cream);
+}
+
+.contact-hero-bg {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  display: block;
+}
+
+/* warm cream wash over the photo */
+.contact-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(245, 231, 194, 0.52);
+  z-index: 1;
+}
+
+/* "CONTACT US" sits at the bottom-left of the hero */
+.contact-hero-text {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: flex-end;
+  height: 100%;
+  padding: 0 56px 44px;
+}
+
+.contact-hero-text h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 54px;
+  font-weight: 900;
+  color: var(--brown-dk);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+
+/* ══════════════════════════════════════
+   FOLLOW US ON OUR SOCIALS
+══════════════════════════════════════ */
+.contact-socials {
+  display: grid;
+  /* left column gets natural text width; right image bleeds to page edge */
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+  background: var(--cream);
+  /* Left padding only — right image must reach the page edge */
+  padding: 60px 0 60px 56px;
+  gap: 40px;
+  min-height: 380px;
+}
+
+/* LEFT ─ heading + list + icons */
+.contact-socials-left {
+  padding-right: 24px;
+}
+
+.contact-socials-left h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--brown);
+  margin-bottom: 28px;
+  line-height: 1.15;
+}
+
+.social-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 52px;
+}
+
+.social-list li {
+  font-family: 'Lato', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--brown-dk);
+}
+
+/* three dark circles */
+.social-icons-row {
+  display: flex;
+  gap: 16px;
+}
+
+.soc-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--brown-dk);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s;
+  flex-shrink: 0;
+}
+
+.soc-icon:hover { background: var(--orange); }
+
+.soc-icon svg {
+  width: 22px;
+  height: 22px;
+  fill: var(--white);
+  display: block;
+}
+
+/* RIGHT ─ pastry photo bleeds to page edge */
+.contact-socials-right {
+  overflow: hidden;
+  height: 320px;
+  /* no border-radius, no margin-right — sits flush with page edge */
+}
+
+.contact-socials-right img,
+.contact-socials-right .img-ph {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
+/* ══════════════════════════════════════
+   GET IN TOUCH FORM
+══════════════════════════════════════ */
+.contact-form-wrapper {
+  background: var(--cream);
+  padding: 72px 56px 88px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-form-block {
+  width: 100%;
+  max-width: 370px;  /* matches wireframe form width */
+}
+
+.contact-form-block h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--brown-dk);
+  margin-bottom: 6px;
+}
+
+.contact-form-block .form-sub {
+  font-family: 'Lato', sans-serif;
+  font-size: 12px;
+  color: var(--gray-txt);
+  line-height: 1.55;
+  margin-bottom: 22px;
+}
+
+/* First Name + Last Name row */
+.form-name-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+/* individual field */
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 14px;
+}
+
+.form-field label {
+  font-family: 'Lato', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--brown-dk);
+}
+
+.form-field input {
+  border: 1px solid rgba(58, 44, 30, 0.22);
+  border-radius: 4px;
+  padding: 9px 10px;
+  font-family: 'Lato', sans-serif;
+  font-size: 12px;
+  color: var(--gray-txt);
+  background: var(--white);
+  outline: none;
+  width: 100%;
+  transition: border-color 0.18s;
+}
+
+.form-field input:focus          { border-color: var(--orange); }
+.form-field input::placeholder   { color: rgba(107, 85, 64, 0.45); }
+
+/* newsletter checkbox row */
+.form-check {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 2px;
+  margin-bottom: 22px;
+}
+
+.form-check input[type="checkbox"] {
+  width: 13px;
+  height: 13px;
+  accent-color: var(--orange);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.form-check label {
+  font-family: 'Lato', sans-serif;
+  font-size: 11px;
+  color: var(--gray-txt);
+  cursor: pointer;
+}
+
+/* Submit button — blue as shown in the wireframe */
+.form-submit-row {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn-contact-submit {
+  background: #4a6cf7;
+  color: var(--white);
+  border: none;
+  border-radius: 4px;
+  padding: 11px 38px;
+  font-family: 'Lato', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-contact-submit:hover { background: #3658e0; }

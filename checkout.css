@@ -1,0 +1,245 @@
+/* ============================================================
+   checkout.css — Minny's Bakery Checkout Page
+   Companion to styles.css (shared tokens & navbar/footer)
+   ============================================================ */
+
+/* ══════════════════════════════════════
+   PAGE BODY
+══════════════════════════════════════ */
+.checkout-body {
+  background: var(--cream);
+  /* wireframe shows ~124px left inset for all content */
+  padding: 56px 124px 120px;
+  min-height: 62vh;
+}
+
+/* ── "CHECK OUT" heading ── */
+.checkout-body h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 52px;
+  font-weight: 900;
+  color: var(--brown-dk);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 44px;
+  line-height: 1;
+}
+
+
+/* ══════════════════════════════════════
+   CREDIT CARD SECTION
+══════════════════════════════════════ */
+.cc-section {
+  /* matches the form width in the wireframe */
+  max-width: 800px;
+}
+
+.cc-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--brown);
+  margin-bottom: 20px;
+}
+
+
+/* ── Saved card row ── */
+.saved-card-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 28px;
+}
+
+.saved-card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.saved-card-number {
+  font-family: 'Lato', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--brown-dk);
+}
+
+.saved-card-exp {
+  font-family: 'Lato', sans-serif;
+  font-size: 11px;
+  color: var(--gray-txt);
+}
+
+/* "Add payment method" — dark rounded pill from wireframe */
+.btn-add-payment {
+  background: var(--brown-dk);
+  color: var(--white);
+  border: none;
+  border-radius: 24px;
+  padding: 12px 28px;
+  font-family: 'Lato', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.2s;
+}
+
+.btn-add-payment:hover { background: var(--orange); }
+
+
+/* ── "Add new credit card" header row ── */
+.new-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.new-card-header > span {
+  font-family: 'Lato', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--brown-dk);
+}
+
+/* Visa text + Mastercard circles */
+.card-brands {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand-visa {
+  font-family: 'Lato', sans-serif;
+  font-size: 12px;
+  font-weight: 900;
+  color: #1a1f71;
+  letter-spacing: 1.5px;
+  border: 1px solid rgba(58, 44, 30, 0.2);
+  border-radius: 4px;
+  padding: 3px 8px;
+  background: var(--white);
+  line-height: 1.4;
+}
+
+/* Mastercard two-circle logo */
+.brand-mc {
+  display: flex;
+  align-items: center;
+}
+
+.mc-circle {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+}
+
+.mc-circle:first-child {
+  background: #eb001b;
+  margin-right: -10px;
+  z-index: 1;
+}
+
+.mc-circle:last-child {
+  background: #f79e1b;
+}
+
+
+/* ══════════════════════════════════════
+   CARD FORM FIELDS
+══════════════════════════════════════ */
+.cc-field {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 14px;
+}
+
+.cc-field label {
+  font-family: 'Lato', sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: var(--brown);
+}
+
+/* wrapper lets us position the checkmark icon inside the input */
+.cc-input-wrap {
+  position: relative;
+}
+
+.cc-field input {
+  width: 100%;
+  border: 1px solid rgba(58, 44, 30, 0.22);
+  border-radius: 6px;
+  padding: 12px 14px;
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+  color: var(--brown-dk);
+  background: var(--white);
+  outline: none;
+  transition: border-color 0.18s;
+}
+
+.cc-field input:focus        { border-color: var(--orange); }
+.cc-field input::placeholder { color: rgba(107, 85, 64, 0.4); }
+
+/* green validation checkmark circle (card number field) */
+.field-check {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #27ae60;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.field-check::after {
+  content: '✓';
+  color: var(--white);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+/* Expiration (wider) + CVC (narrower) side by side */
+.cc-row {
+  display: grid;
+  /* expiration ~60%, CVC ~40% matching the wireframe proportions */
+  grid-template-columns: 3fr 2fr;
+  gap: 14px;
+}
+
+
+/* ── Save Card checkbox ── */
+.save-card-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.save-card-row input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  /* wireframe shows a blue/indigo accent on the checked box */
+  accent-color: #4a6cf7;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.save-card-row label {
+  font-family: 'Lato', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--brown-dk);
+  cursor: pointer;
+}
