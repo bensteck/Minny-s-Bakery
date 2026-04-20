@@ -118,11 +118,10 @@
   display: block;
 }
  
-/* RIGHT column — image fills the column and bleeds to the page edge */
 .contact-socials-right {
   overflow: hidden;
   height: 340px;
-  /* no right margin — flush with page edge */
+  border-radius: 12px;
 }
  
 .contact-socials-right img {
