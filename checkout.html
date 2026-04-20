@@ -3,14 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <title>Check Out – Minny's Bakery</title>
-  <link rel="icon" type="image/x-icon" href="images/logo.png">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="checkout.css" />
 </head>
 <body>
 <div id="page">
-
+ 
   <nav class="navbar" id="top">
     <img src="images/logo.png" class="nav-logo-box" alt="Minny's Bakery Logo">
     <ul class="nav-links">
@@ -18,18 +17,18 @@
       <li><a href="#">Menu</a></li>
       <li><a href="#">About Us</a></li>
       <li><a href="contact.html">Contact Us</a></li>
-      <li><a href="checkout.html" class="active">Cart: 0</a></li>
+      <li><a href="#" class="active">Cart: 0</a></li>
     </ul>
     <a href="#" class="nav-cta">Sign Up for Our Newsletter</a>
   </nav>
-
+ 
   <!-- CHECKOUT BODY -->
   <div class="checkout-body">
     <h1>CHECK OUT</h1>
-
+ 
     <div class="cc-section">
       <h2>Credit card</h2>
-
+ 
       <!-- Saved card -->
       <div class="saved-card-row">
         <div class="saved-card-info">
@@ -38,7 +37,7 @@
         </div>
         <button class="btn-add-payment">Add payment method</button>
       </div>
-
+ 
       <!-- New card form header -->
       <div class="new-card-header">
         <span>Add new credit card</span>
@@ -50,22 +49,22 @@
           </div>
         </div>
       </div>
-
+ 
       <!-- Card Number -->
       <div class="cc-field">
         <label>Card Number</label>
         <div class="cc-input-wrap">
-          <input type="text" value="0000 0000 0000 0000">
-          <div class="field-check"></div>
+          <input type="text" id="cardNumber" placeholder="0000 0000 0000 0000">
+          <div class="field-check" id="cardCheck" style="display:none;"></div>
         </div>
       </div>
-
+ 
       <!-- Card Holder -->
       <div class="cc-field">
         <label>Card Holder</label>
-        <input type="text" value="Enter Card Holder">
+        <input type="text" placeholder="Card Holder">
       </div>
-
+ 
       <!-- Expiration + CVC -->
       <div class="cc-row">
         <div class="cc-field">
@@ -77,7 +76,7 @@
           <input type="text" placeholder="">
         </div>
       </div>
-
+ 
       <!-- Save Card -->
       <div class="save-card-row">
         <input type="checkbox" id="saveCard" checked>
@@ -85,7 +84,7 @@
       </div>
     </div>
   </div>
-
+ 
   <!-- FOOTER -->
   <footer>
     <div class="footer-grid">
@@ -127,7 +126,14 @@
       </span>
     </div>
   </footer>
-
+ 
 </div>
+<script>
+  const cardNumber = document.getElementById('cardNumber');
+  const cardCheck  = document.getElementById('cardCheck');
+  cardNumber.addEventListener('input', () => {
+    cardCheck.style.display = cardNumber.value.trim() ? 'flex' : 'none';
+  });
+</script>
 </body>
 </html>
