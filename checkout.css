@@ -1,11 +1,4 @@
-/* ============================================================
-   checkout.css — Minny's Bakery Checkout Page
-   Companion to styles.css (shared tokens & navbar/footer)
-   ============================================================ */
 
-/* ══════════════════════════════════════
-   PAGE BODY
-══════════════════════════════════════ */
 .checkout-body {
   background: var(--cream);
   /* wireframe shows ~124px left inset for all content */
@@ -13,7 +6,7 @@
   min-height: 62vh;
 }
 
-/* ── "CHECK OUT" heading ── */
+
 .checkout-body h1 {
   font-family: 'Playfair Display', serif;
   font-size: 52px;
@@ -30,7 +23,7 @@
    CREDIT CARD SECTION
 ══════════════════════════════════════ */
 .cc-section {
-  /* matches the form width in the wireframe */
+ 
   max-width: 800px;
 }
 
@@ -210,16 +203,14 @@
   line-height: 1;
 }
 
-/* Expiration (wider) + CVC (narrower) side by side */
+
 .cc-row {
   display: grid;
-  /* expiration ~60%, CVC ~40% matching the wireframe proportions */
   grid-template-columns: 3fr 2fr;
   gap: 14px;
 }
 
 
-/* ── Save Card checkbox ── */
 .save-card-row {
   display: flex;
   align-items: center;
@@ -230,7 +221,6 @@
 .save-card-row input[type="checkbox"] {
   width: 18px;
   height: 18px;
-  /* wireframe shows a blue/indigo accent on the checked box */
   accent-color: #4a6cf7;
   cursor: pointer;
   flex-shrink: 0;
