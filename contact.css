@@ -243,3 +243,12 @@
 }
  
 .btn-contact-submit:hover { background: #3658e0; }
+
+#page {
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  margin-top: auto;
+}
