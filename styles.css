@@ -149,7 +149,11 @@ img { display: block; }
   color: var(--brown);
   margin-bottom: 24px;
 }
-.hero-btns { display: flex; gap: 12px; }
+
+.hero-btns { 
+   display: flex; gap: 12px; 
+}
+
 .btn-brown {
   background: var(--brown);
   color: var(--white);
@@ -160,7 +164,12 @@ img { display: block; }
   line-height: 1.5;
   text-align: center;
   width: 140px;
+  min-height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
 }
 .btn-brown:hover { background: var(--brown-dk); }
 
