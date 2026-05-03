@@ -159,6 +159,8 @@ img { display: block; }
   font-weight: 700;
   line-height: 1.5;
   text-align: center;
+  width: 140px;
+}
 }
 .btn-brown:hover { background: var(--brown-dk); }
 
@@ -531,6 +533,7 @@ footer {
    line-height: 1.65; 
    margin-bottom: 16px; 
    color: white;
+   max-width: 200px;
 }
 .f-socials { display: flex; gap: 10px; }
 .f-soc {
