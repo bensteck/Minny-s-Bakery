@@ -1,12 +1,9 @@
-
-Copy
-
 /* ============================================================
    Minny's Bakery — about.css
    Page-specific styles for about.html
    Requires: styles.css (shared design tokens + base styles)
    ============================================================ */
-
+ 
 #page {
   display: flex;
   flex-direction: column;
@@ -72,7 +69,6 @@ Copy
   line-height: 1.05;
 }
  
-
 .about-section-heading {
   font-family: 'Playfair Display', serif;
   font-size: 34px;
@@ -91,7 +87,6 @@ Copy
   line-height: 1.7;
 }
  
-
 .about-text-block h3 {
   font-family: 'Playfair Display', serif;
   font-size: 20px;
@@ -107,7 +102,6 @@ Copy
   margin-bottom: 16px;
 }
  
-
 .about-img,
 .about-legacy-img,
 .about-pie-img {
@@ -125,7 +119,7 @@ Copy
   border-radius: 6px;
 }
  
-
+/* ── SECTION: ABOUT THE LOCATION ── */
 .about-location {
   background: var(--cream);
   padding: 64px 56px;
@@ -140,30 +134,31 @@ Copy
   margin: 0 auto;
 }
  
-.about-img        { height: 300px; }
-.about-img-ph     { height: 300px; }
+.about-img    { height: 300px; }
+.about-img-ph { height: 300px; }
  
-
+/* ── SECTION: DEEP FAMILY LEGACY ── */
 .about-legacy {
   background: var(--brown);
   padding: 64px 56px;
   border-top: none;
 }
-
+ 
 .about-legacy .about-section-heading {
   color: var(--cream);
 }
-
+ 
 .about-legacy .about-section-sub {
   color: rgba(255,255,255,0.6);
 }
-
+ 
 .about-legacy .about-text-block h3 {
   color: var(--cream);
 }
-
+ 
 .about-legacy .about-text-block p {
   color: var(--cream-mid);
+}
  
 .about-legacy-inner {
   display: grid;
@@ -177,7 +172,7 @@ Copy
 .about-legacy-img     { height: 340px; }
 .about-legacy-img-ph  { height: 340px; }
  
-
+/* ── SECTION: MINNY'S CHOCOLATE PIE ── */
 .about-pie {
   background: var(--cream);
   padding: 64px 56px;
@@ -196,7 +191,7 @@ Copy
 .about-pie-img    { height: 300px; }
 .about-pie-img-ph { height: 300px; }
  
-
+/* ── BACK TO TOP ── */
 .back-top-cream {
   background: var(--cream);
   text-align: center;
