@@ -153,8 +153,10 @@ img { display: block; }
 }
 }
 
-.hero-btns { 
-   display: flex; gap: 12px; 
+.hero-btns {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
 }
 
 .btn-brown {
