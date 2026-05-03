@@ -141,6 +141,7 @@ img { display: block; }
   font-style: italic;
   margin-bottom: 10px;
 }
+
 .hero-title {
   font-family: 'Playfair Display', serif;
   font-size: 52px;
@@ -151,7 +152,7 @@ img { display: block; }
   text-transform: uppercase;
   width: 260px;
 }
-}
+
 
 .hero-btns {
   display: flex;
@@ -175,8 +176,10 @@ img { display: block; }
   justify-content: center;
 }
 
+
+.btn-brown:hover { 
+   background: var(--brown-dk); 
 }
-.btn-brown:hover { background: var(--brown-dk); }
 
 
 .order-wrapper {
