@@ -145,10 +145,25 @@ Copy
  
 
 .about-legacy {
-  background: var(--cream);
+  background: var(--brown);
   padding: 64px 56px;
-  border-top: 1px solid rgba(0,0,0,0.07);
+  border-top: none;
 }
+
+.about-legacy .about-section-heading {
+  color: var(--cream);
+}
+
+.about-legacy .about-section-sub {
+  color: rgba(255,255,255,0.6);
+}
+
+.about-legacy .about-text-block h3 {
+  color: var(--cream);
+}
+
+.about-legacy .about-text-block p {
+  color: var(--cream-mid);
  
 .about-legacy-inner {
   display: grid;
