@@ -4,6 +4,16 @@
    Requires: styles.css (shared design tokens + base styles)
    ============================================================ */
  
+/* ── FOOTER ALWAYS AT BOTTOM ──────────────────────────────── */
+#page {
+  display: flex;
+  flex-direction: column;
+}
+ 
+.about-pie {
+  flex: 1;
+}
+ 
 /* ── HERO ── */
 .about-hero {
   position: relative;
