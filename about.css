@@ -6,8 +6,7 @@ Copy
    Page-specific styles for about.html
    Requires: styles.css (shared design tokens + base styles)
    ============================================================ */
- 
-/* ── FOOTER ALWAYS AT BOTTOM ──────────────────────────────── */
+
 #page {
   display: flex;
   flex-direction: column;
@@ -17,7 +16,6 @@ Copy
   flex: 1;
 }
  
-/* ── HERO ── */
 .about-hero {
   position: relative;
   height: 500px;
@@ -74,7 +72,7 @@ Copy
   line-height: 1.05;
 }
  
-/* ── SHARED SECTION STYLES ── */
+
 .about-section-heading {
   font-family: 'Playfair Display', serif;
   font-size: 34px;
@@ -93,7 +91,7 @@ Copy
   line-height: 1.7;
 }
  
-/* ── SHARED TEXT BLOCK ── */
+
 .about-text-block h3 {
   font-family: 'Playfair Display', serif;
   font-size: 20px;
@@ -109,7 +107,7 @@ Copy
   margin-bottom: 16px;
 }
  
-/* ── SHARED IMAGE + PLACEHOLDER ── */
+
 .about-img,
 .about-legacy-img,
 .about-pie-img {
@@ -127,7 +125,7 @@ Copy
   border-radius: 6px;
 }
  
-/* ── SECTION: ABOUT THE LOCATION ── */
+
 .about-location {
   background: var(--cream);
   padding: 64px 56px;
@@ -145,7 +143,7 @@ Copy
 .about-img        { height: 300px; }
 .about-img-ph     { height: 300px; }
  
-/* ── SECTION: DEEP FAMILY LEGACY ── */
+
 .about-legacy {
   background: var(--cream);
   padding: 64px 56px;
@@ -164,7 +162,7 @@ Copy
 .about-legacy-img     { height: 340px; }
 .about-legacy-img-ph  { height: 340px; }
  
-/* ── SECTION: MINNY'S CHOCOLATE PIE ── */
+
 .about-pie {
   background: var(--cream);
   padding: 64px 56px;
@@ -183,7 +181,7 @@ Copy
 .about-pie-img    { height: 300px; }
 .about-pie-img-ph { height: 300px; }
  
-/* ── BACK TO TOP (cream variant for about page) ── */
+
 .back-top-cream {
   background: var(--cream);
   text-align: center;
