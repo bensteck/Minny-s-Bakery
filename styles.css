@@ -148,6 +148,9 @@ img { display: block; }
   line-height: 1.05;
   color: var(--brown);
   margin-bottom: 24px;
+  text-transform: uppercase;
+  width: 260px;
+}
 }
 
 .hero-btns { 
